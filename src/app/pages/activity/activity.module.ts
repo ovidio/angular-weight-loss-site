@@ -9,7 +9,7 @@ import { ActivityComponent } from './activity.component';
   declarations: [ActivityComponent],
   imports: [
     CommonModule,
-    ActivityRoutingModule
-  ]
+    ActivityRoutingModule,
+  ],
 })
 export class ActivityModule { }

@@ -9,7 +9,7 @@ import { NutritionComponent } from './nutrition.component';
   declarations: [NutritionComponent],
   imports: [
     CommonModule,
-    NutritionRoutingModule
-  ]
+    NutritionRoutingModule,
+  ],
 })
 export class NutritionModule { }

@@ -10,6 +10,6 @@ import { WeightDashComponent } from './weight-dash.component';
   imports: [
     CommonModule,
     WeightDashRoutingModule,
-  ]
+  ],
 })
 export class WeightDashModule { }
