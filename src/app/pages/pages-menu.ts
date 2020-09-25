@@ -2,8 +2,35 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
+    title: 'Dashboard',
+    icon: {
+      icon: 'weight',
+      pack: 'fa',
+    },
+    link: '/pages/weight-dash',
+  },
+  {
+    title: 'Activity',
+    icon: {
+      icon: 'walking',
+      pack: 'fa',
+    },
+    link: '/pages/activity',
+  },
+  {
+    title: 'Nutrition',
+    icon: {
+      icon: 'cookie-bite',
+      pack: 'fa',
+    },
+    link: '/pages/nutrition',
+  },
+  {
     title: 'E-commerce',
-    icon: 'shopping-cart-outline',
+    icon: {
+      icon: 'sitemap',
+      pack: 'fa',
+    },
     link: '/pages/dashboard',
     home: true,
   },

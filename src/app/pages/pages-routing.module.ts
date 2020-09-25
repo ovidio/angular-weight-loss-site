@@ -11,6 +11,21 @@ const routes: Routes = [{
   component: PagesComponent,
   children: [
     {
+      path: 'weight-dash',
+      loadChildren: () => import('./weight-dash/weight-dash.module')
+      .then(m => m.WeightDashModule),
+    },
+    {
+      path: 'activity',
+      loadChildren: () => import('./activity/activity.module')
+        .then(m => m.ActivityModule),
+    },
+    {
+      path: 'nutrition',
+      loadChildren: () => import('./nutrition/nutrition.module')
+        .then(m => m.NutritionModule),
+    },
+    {
       path: 'dashboard',
       component: ECommerceComponent,
     },
