@@ -92,6 +92,6 @@ export class WeightDashComponent implements OnInit {
   }
 
   getDBObjectValuesInArray(dbObject: any, numDays: number, keyword: string) {
-    return Object.values(dbObject).slice(numDays).map(val => val[keyword])
+    return Object.values(dbObject).slice(numDays).map(val => val[keyword]);
   }
 }

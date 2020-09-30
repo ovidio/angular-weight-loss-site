@@ -37,7 +37,7 @@ export class ActivityComponent implements OnInit {
       this.dbExerciseArray.push({
         date: dayjs(key).format('MM/DD'),
         length: activity[key]['len_of_exer'],
-        level: activity[key]['level_exer']
+        level: activity[key]['level_exer'],
       });
     }
   }
