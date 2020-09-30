@@ -226,7 +226,7 @@ export const DEFAULT_THEME = {
     visitors: {
       tooltipBg: baseThemeVariables.bg,
       tooltipLineColor: 'rgba(0, 0, 0, 0)',
-      tooltipLineWidth: '1',
+      tooltipLineWidth: '0',
       tooltipBorderColor: baseThemeVariables.border2,
       tooltipExtraCss: 'border-radius: 10px; padding: 8px 24px;',
       tooltipTextColor: baseThemeVariables.fgText,

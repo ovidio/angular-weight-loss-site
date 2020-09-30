@@ -14,42 +14,41 @@
   <div class="row">
     <div class="col-md-6">
       <nb-card class="medium" style="padding-bottom: 2rem;">
-        <nb-card-header>Enter Calories Consumed For Today</nb-card-header>
-        <nb-card-body style="display: flex;">
-          <div>
-            <div class="input-bottom-spacing">
-              <p>Date</p>
-              <input nbInput class="size-medium status-basic shape-rectangle" [(ngModel)]="ngModelDate"
-              placeholder="Enter Date" [nbDatepicker]="dateTimePicker">
-              <nb-datepicker #dateTimePicker></nb-datepicker>
-            </div>
-
-            <div class="input-bottom-spacing">
-              <p>Calories Consumed</p>
-            <input type="number" nbInput class="size-medium status-basic shape-rectangle"
-            placeholder="Enter Calories Consumed" [(ngModel)]="calConsumed">
-            </div>
-
-            <button class="btn btn-primary" (click)="saveCalories()" type="button">Save</button>
+        <nb-card-header>Enter Weight For Today</nb-card-header>
+        <nb-card-body>
+          <div class="input-bottom-spacing">
+            <p>Date</p>
+            <input nbInput class="size-medium status-basic shape-rectangle" [(ngModel)]="ngModelDate"
+            placeholder="Enter Date" [nbDatepicker]="dateTimePicker">
+            <nb-datepicker #dateTimePicker></nb-datepicker>
           </div>
+
+          <div class="input-bottom-spacing">
+            <p>Weight (in lbs)</p>
+          <input type="number" nbInput class="size-medium status-basic shape-rectangle"
+          placeholder="Enter Weight" [(ngModel)]="weightInput" step="0.1">
+          </div>
+
+          <button class="btn btn-primary" (click)="saveWeight()" type="button">Save</button>
         </nb-card-body>
       </nb-card>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-6">
       <nb-card [size]='medium'>
-        <nb-card-header>Previous Calories Consumed Entries</nb-card-header>
+        <nb-card-header>Previous Weight Entries</nb-card-header>
         <nb-card-body>
           <div class="row">
             <nb-list>
-              <nb-list-item *ngFor="let item of dbCaloriesArray">
+              <nb-list-item *ngFor="let item of dbWeightArray">
                 <p>Date:    {{ item.date }}</p>
               </nb-list-item>
             </nb-list>
             <nb-list>
-              <nb-list-item *ngFor="let item of dbCaloriesArray">
-                <p>Calories:    {{ item.calories }}</p>
+              <nb-list-item *ngFor="let item of dbWeightArray">
+                <p>Weight:    {{ item.weight }}</p>
               </nb-list-item>
             </nb-list>
           </div>

@@ -3,19 +3,19 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NbCardModule, NbListModule, NbDatepickerModule } from '@nebular/theme';
 
-import { ActivityRoutingModule } from './activity-routing.module';
-import { ActivityComponent } from './activity.component';
+import { WeightRoutingModule } from './weight-routing.module';
+import { WeightComponent } from './weight.component';
 
 
 @NgModule({
-  declarations: [ActivityComponent],
+  declarations: [WeightComponent],
   imports: [
     CommonModule,
     FormsModule,
+    WeightRoutingModule,
     NbCardModule,
     NbListModule,
     NbDatepickerModule,
-    ActivityRoutingModule,
   ],
 })
-export class ActivityModule { }
+export class WeightModule { }
