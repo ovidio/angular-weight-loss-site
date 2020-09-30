@@ -4,14 +4,13 @@ import { NbThemeService, NbColorHelper } from '@nebular/theme';
 @Component({
   selector: 'ngx-chartjs-bar',
   template: `
-    <chart type="bar" [data]="barData" [options]="barOptions"></chart>
+    <chart type="bar" [data]="barData" [options]="options"></chart>
   `,
 })
 export class ChartjsBarComponent implements OnInit, OnDestroy {
   @Input() data: any;
   @Input() options: any;
   barData: any;
-  barOptions: any;
   themeSubscription: any;
 
   constructor(private theme: NbThemeService) {
@@ -21,7 +20,6 @@ export class ChartjsBarComponent implements OnInit, OnDestroy {
       const chartjs: any = config.variables.chartjs;
 
       this.options = {
-        maintainAspectRatio: false,
         responsive: true,
         legend: {
           labels: {
@@ -58,7 +56,6 @@ export class ChartjsBarComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.barData = this.data;
-    this.barOptions = this.options;
   }
 
   ngOnDestroy(): void {

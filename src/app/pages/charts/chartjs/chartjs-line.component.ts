@@ -9,7 +9,7 @@ import { NbThemeService, NbColorHelper } from '@nebular/theme';
 })
 export class ChartjsLineComponent implements OnInit, OnDestroy {
   @Input() data: any;
-  @Input() options: any;
+
   lineData;
   lineOptions;
   themeSubscription: any;
@@ -20,13 +20,8 @@ export class ChartjsLineComponent implements OnInit, OnDestroy {
       const chartjs: any = config.variables.chartjs;
 
       this.lineOptions = {
-        title: {
-          display: true,
-          text: this.options.title.text ? this.options.title.text : 'Testing',
-          position: 'top',
-        },
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         scales: {
           xAxes: [
             {
@@ -70,7 +65,6 @@ export class ChartjsLineComponent implements OnInit, OnDestroy {
   }
   ngOnInit() {
     this.lineData = this.data;
-    this.lineOptions = this.options;
   }
   ngOnDestroy(): void {
     this.themeSubscription.unsubscribe();

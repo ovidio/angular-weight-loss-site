@@ -26,6 +26,8 @@ import { EchartsMultipleXaxisComponent } from './echarts/echarts-multiple-xaxis.
 import { EchartsAreaStackComponent } from './echarts/echarts-area-stack.component';
 import { EchartsBarAnimationComponent } from './echarts/echarts-bar-animation.component';
 import { EchartsRadarComponent } from './echarts/echarts-radar.component';
+import { BarChartComponent } from './chart/bar-chart/bar-chart.component';
+import { LineChartComponent } from './chart/line-chart/line-chart.component';
 
 const components = [
   ChartjsBarComponent,
@@ -58,6 +60,7 @@ const components = [
     ChartModule,
     NbCardModule,
   ],
-  declarations: [...routedComponents, ...components],
+  declarations: [...routedComponents, ...components, BarChartComponent, LineChartComponent],
+  exports: [ChartjsBarComponent, ChartjsLineComponent],
 })
 export class ChartsModule {}
