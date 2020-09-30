@@ -12,7 +12,7 @@ import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import {
@@ -25,7 +25,6 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import { environment } from 'environments/environment';
-import { NbCardModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [AppComponent],

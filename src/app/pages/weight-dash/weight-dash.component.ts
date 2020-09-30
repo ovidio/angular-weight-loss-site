@@ -9,9 +9,7 @@ import * as dayjs from 'dayjs';
 })
 export class WeightDashComponent implements OnInit {
   lineData: any;
-  lineOptions: any;
   barData: any;
-  barOptions: any;
   dbWeightsObject: any;
   dbCaloriesObject: any;
   caloriesAllotedArr: Array<number> = [2680, 2680, 2680, 2680, 2680, 2680, 2680];
@@ -44,12 +42,6 @@ export class WeightDashComponent implements OnInit {
           pointHoverBackgroundColor: '#55bae7',
           pointHoverBorderColor: '#55bae7',
         }],
-      };
-
-      this.lineOptions = {
-        title: {
-          text: 'You know the vibes',
-        },
       };
 
       this.weightLoading = true;
