@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import * as dayjs from 'dayjs';
 
+import { Calories } from '../../shared/models/calories.model';
+import { Weight } from '../../shared/models/weight.model';
+
 @Component({
   selector: 'ngx-weight-dash',
   templateUrl: './weight-dash.component.html',
@@ -28,7 +31,7 @@ export class WeightDashComponent implements OnInit {
       const keyword = 'weight';
 
       const datesAsKey = this.getDatesByKey(dbValues, -7);
-      const weightArr = this.getDBObjectValuesInArray(dbValues, -7, keyword);
+      const weightArr: Array<Weight> = this.getDBObjectValuesInArray(dbValues, -7, keyword);
 
       this.lineData = {
         title: 'Hello',
@@ -53,7 +56,7 @@ export class WeightDashComponent implements OnInit {
       const keyword = 'calories';
 
       const datesAsKey = this.getDatesByKey(dbValues, -7);
-      const caloriesArr = this.getDBObjectValuesInArray(dbValues, -7, keyword);
+      const caloriesArr: Array<Calories> = this.getDBObjectValuesInArray(dbValues, -7, keyword);
 
       this.barData = {
         labels: datesAsKey,

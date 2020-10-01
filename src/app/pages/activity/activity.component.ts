@@ -2,6 +2,8 @@ import { Component, OnInit} from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import * as dayjs from 'dayjs';
 
+import { Activity } from '../../shared/models/activity.model';
+
 @Component({
   selector: 'ngx-activity',
   templateUrl: './activity.component.html',
@@ -10,7 +12,7 @@ import * as dayjs from 'dayjs';
 export class ActivityComponent implements OnInit {
   doneLoading: boolean = false;
   dbActivitiesObject: any;
-  dbExerciseArray: Array<any> = [];
+  dbExerciseArray: Array<Activity> = [];
   ngModelDate = new Date();
   lenOfActivityInput = 0;
   intenOfActivityInput = 1;

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import * as dayjs from 'dayjs';
 
+import { Calories } from '../../shared/models/calories.model';
+
 @Component({
   selector: 'ngx-nutrition',
   templateUrl: './nutrition.component.html',
@@ -10,7 +12,7 @@ import * as dayjs from 'dayjs';
 export class NutritionComponent implements OnInit {
   doneLoading: boolean = false;
   dbCaloriesObject: any;
-  dbCaloriesArray: Array<any> = [];
+  dbCaloriesArray: Array<Calories> = [];
   ngModelDate = new Date();
   calConsumed = 2680;
 

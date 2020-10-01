@@ -3,6 +3,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { FormControl } from '@angular/forms';
 import * as dayjs from 'dayjs';
 
+import { Weight } from '../../shared/models/weight.model';
 
 @Component({
   selector: 'ngx-weight',
@@ -14,7 +15,7 @@ export class WeightComponent implements OnInit {
   doneLoading: boolean = false;
   dbWeightsObject: any;
   dbPush;
-  dbWeightArray: Array<any> = [];
+  dbWeightArray: Array<Weight> = [];
   formControl = new FormControl(new Date);
   ngModelDate = new Date();
   weightInput = 300;
