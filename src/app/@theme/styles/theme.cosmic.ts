@@ -129,16 +129,6 @@ export const COSMIC_THEME = {
       chartInnerLineColor: baseThemeVariables.bg2,
     },
 
-    echarts: {
-      bg: baseThemeVariables.bg,
-      textColor: baseThemeVariables.fgText,
-      axisLineColor: baseThemeVariables.fgText,
-      splitLineColor: baseThemeVariables.separator,
-      itemHoverShadowColor: 'rgba(0, 0, 0, 0.5)',
-      tooltipBackgroundColor: baseThemeVariables.primary,
-      areaOpacity: '1',
-    },
-
     chartjs: {
       axisLineColor: baseThemeVariables.separator,
       textColor: baseThemeVariables.fgText,
