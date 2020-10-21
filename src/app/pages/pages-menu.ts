@@ -33,4 +33,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     },
     link: '/pages/nutrition',
   },
+  {
+    title: 'Map',
+    icon: {
+      icon: 'map-marked',
+      pack: 'fa',
+    },
+    link: '/pages/map',
+  },
 ];
