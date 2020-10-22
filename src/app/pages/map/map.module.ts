@@ -5,7 +5,7 @@ import { NbCardModule, NbListModule, NbDatepickerModule } from '@nebular/theme';
 
 import { MapRoutingModule } from './map-routing.module';
 import { MapComponent } from './map.component';
-import { GoogleMapsModule } from '@angular/google-maps'
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [MapComponent],

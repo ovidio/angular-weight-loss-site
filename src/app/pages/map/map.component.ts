@@ -127,7 +127,7 @@ export class MapComponent implements OnInit {
           { // end of polyline
             lat: lastCoord[1],
             lng: lastCoord[0],
-          }
+          },
         ];
 
         this.vertices = parsedTcx.features[0].geometry.coordinates.map(coords => {

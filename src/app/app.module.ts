@@ -25,7 +25,7 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import { environment } from 'environments/environment';
-import { GoogleMapsModule } from '@angular/google-maps'
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [AppComponent],
