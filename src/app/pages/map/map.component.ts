@@ -84,6 +84,9 @@ export class MapComponent implements OnInit {
     .subscribe(result => {
       this.activityArray = this.formatActivityData(result.activities);
       this.loading = false;
+    },
+    error => {
+      this.loading = false;
     });
   }
 
