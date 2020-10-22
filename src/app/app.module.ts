@@ -25,6 +25,7 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import { environment } from 'environments/environment';
+import { GoogleMapsModule } from '@angular/google-maps'
 
 @NgModule({
   declarations: [AppComponent],
@@ -48,6 +49,7 @@ import { environment } from 'environments/environment';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
+    GoogleMapsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
