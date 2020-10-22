@@ -29,6 +29,10 @@ export class NutritionComponent implements OnInit {
     });
   }
 
+  /**
+   * This method takes in a dbObject and pushes a formatted object to the
+   * dbCaloriesArray to be displayed properly
+   */
   getCaloriesByDate(calories: any) {
     const keys = Object.keys(calories).sort(this.dateStrSort);
 
@@ -40,6 +44,9 @@ export class NutritionComponent implements OnInit {
     }
   }
 
+  /**
+   * This method adds the user input to the Firebase DB
+   */
   saveCalories() {
     const formattedDate = dayjs(this.ngModelDate).format('YYYY-MM-DD');
 

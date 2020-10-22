@@ -16,6 +16,7 @@ import { NbIconLibraries } from '@nebular/theme';
 })
 export class PagesComponent {
   constructor(iconsLibrary: NbIconLibraries) {
+    // registering Font Awesome as the icon package to use throughout app
     iconsLibrary.registerFontPack('fa', { packClass: 'fa', iconClassPrefix: 'fa' });
     iconsLibrary.registerFontPack('far', { packClass: 'far', iconClassPrefix: 'fa' });
     iconsLibrary.registerFontPack('fas', { packClass: 'fas', iconClassPrefix: 'fa' });

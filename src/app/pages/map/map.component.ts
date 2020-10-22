@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
 import { FitbitService } from '../../@core/utils/fitbit.service';
 import * as tcxParse from 'tcx';
 import * as dayjs from 'dayjs';
@@ -23,7 +22,7 @@ export class MapComponent implements OnInit {
 
   fitbitOAuthUrlProd = 'https://www.fitbit.com/oauth2/authorize'
                         + '?response_type=token&client_id=22BZNC'
-                        + '&redirect_uri=https%3A%2F%2Fweight-tracking.ovi.link'
+                        + '&redirect_uri=https%3A%2F%2Fwww.weight-tracking.ovi.link'
                         + '%2Fpages%2Fmap&scope=activity%20location'
                         + '&expires_in=604800';
   fitbitToken: string;

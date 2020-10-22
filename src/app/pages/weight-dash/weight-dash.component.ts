@@ -21,6 +21,10 @@ export class WeightDashComponent implements OnInit {
   caloriesLoading: boolean = false;
 
   constructor(angularFireDB: AngularFireDatabase) {
+    /**
+     * Google Firebase is a NoSQL DB, thus we can treat each object as a JSON
+     * object.
+     */
     this.dbWeightsObject = angularFireDB.object('weight');
     this.dbCaloriesObject = angularFireDB.object('calories');
   }
@@ -30,6 +34,10 @@ export class WeightDashComponent implements OnInit {
       const dbValues = item.payload.val();
       const keyword = 'weight';
 
+      /**
+       * we get datesAsKey in order to place the labels and the weightArr to
+       * get the actual data for those dates.
+       */
       const datesAsKey = this.getDatesByKey(dbValues, -7);
       const weightArr: Array<Weight> = this.getDBObjectValuesInArray(dbValues, -7, keyword);
 
@@ -51,6 +59,10 @@ export class WeightDashComponent implements OnInit {
       this.isEverythingLoaded();
     });
 
+          /**
+       * we get datesAsKey in order to place the labels and the caloriesArr to
+       * get the actual data for those dates.
+       */
     this.dbCaloriesObject.snapshotChanges().subscribe(item => {
       const dbValues = item.payload.val();
       const keyword = 'calories';
@@ -76,16 +88,19 @@ export class WeightDashComponent implements OnInit {
     });
   }
 
+  // checks if both weight and calories are done processing before rendering
   isEverythingLoaded() {
     if (this.weightLoading && this.caloriesLoading) {
       this.doneLoading = true;
     }
   }
 
+  // returns a formatted list of date values
   getDatesByKey(dates: any, numOfDays: number) {
     return Object.keys(dates).slice(numOfDays).map(val => dayjs(val).format('MM/DD'));
   }
 
+  // returns an array of a single property from whatever dbObject is passed in
   getDBObjectValuesInArray(dbObject: any, numDays: number, keyword: string) {
     return Object.values(dbObject).slice(numDays).map(val => val[keyword]);
   }

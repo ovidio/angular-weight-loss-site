@@ -32,6 +32,10 @@ export class ActivityComponent implements OnInit {
 
   }
 
+    /**
+   * This method takes in a dbObject and pushes a formatted object to the
+   * dbExerciseArray to be displayed properly
+   */
   getExerciseByDate(activity: any) {
     const keys = Object.keys(activity).sort(this.dateStrSort);
 
@@ -44,6 +48,9 @@ export class ActivityComponent implements OnInit {
     }
   }
 
+  /**
+   * This method adds the user input to the Firebase DB
+   */
   saveExercise() {
     const formattedDate = dayjs(this.ngModelDate).format('YYYY-MM-DD');
 

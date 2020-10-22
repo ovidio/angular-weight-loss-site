@@ -35,6 +35,10 @@ export class WeightComponent implements OnInit {
 
   }
 
+  /**
+   * This method takes in a dbObject and pushes the values (date and weight) to
+   * the dbWeightArray which is formatted to display properly.
+   */
   getDateAndWeight(dates: any) {
     const keys = Object.keys(dates).sort(this.dateStrSort);
 
@@ -46,6 +50,9 @@ export class WeightComponent implements OnInit {
     }
   }
 
+  /**
+   * This method takes the user input and pushes it to the Firebase DB
+   */
   saveWeight() {
     const formattedDate = dayjs(this.ngModelDate).format('YYYY-MM-DD');
 
